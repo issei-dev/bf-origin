@@ -259,3 +259,20 @@ function resetPlayerTurn() {
   actedUnitsCount = 0;
   isPlayerTurn = true;
 }
+// --- 既存の変数 ---
+let isPlayerTurn = true;
+let actedUnitsCount = 0;
+const totalUnits = playerUnits.length;
+
+// ★ 追加：バトルが終了したかどうかを判定するフラグ
+let isBattleEnded = false; 
+
+  // ★ 修正：敵を倒した時の処理
+  if (enemyCurrentHp === 0 && !isBattleEnded) {
+    isBattleEnded = true; // バトル終了フラグを立てる
+    
+    // クリスタルの吸収アニメーションが終わるのを待ってからリザルトを表示（約1.5秒後）
+    setTimeout(showResultScreen, 1500); 
+  }
+
+
