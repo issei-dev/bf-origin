@@ -17,11 +17,80 @@
 
     <section id="enemy-area">
       <div class="enemy boss" id="enemy-1">
-  <div class="hp-bar-bg"><div class="hp-bar fill" style="width: 100%;"></div></div>
-  <div class="sprite">
-    <img src="assets/enemy.png" alt="Enemy Boss">
-  </div>
-      <footer id="battle-footer">
+        <div class="hp-bar-bg"><div class="hp-bar fill" style="width: 100%;"></div></div>
+        <div class="sprite">
+          <img src="assets/enemy.png" alt="Enemy Boss">
+        </div>
+      </div>
+    </section>
+
+    <section id="player-area">
+      <div class="unit-grid">
+        
+        <div class="unit front" id="unit-1">
+          <div class="gauge-container">
+            <div class="hp-bar-bg"><div class="hp-bar fill" style="width: 100%;"></div></div>
+            <div class="bb-bar-bg"><div class="bb-bar fill" style="width: 0%;"></div></div>
+          </div>
+          <div class="sprite">
+            <img src="assets/unit-1.png" alt="Unit 1">
+          </div>
+        </div>
+
+        <div class="unit back" id="unit-2">
+          <div class="gauge-container">
+            <div class="hp-bar-bg"><div class="hp-bar fill" style="width: 80%;"></div></div>
+            <div class="bb-bar-bg"><div class="bb-bar fill" style="width: 50%;"></div></div>
+          </div>
+          <div class="sprite">
+            <img src="assets/unit-1.png" alt="Unit 2">
+          </div>
+        </div>
+
+        <div class="unit front" id="unit-3">
+          <div class="gauge-container">
+            <div class="hp-bar-bg"><div class="hp-bar fill" style="width: 100%;"></div></div>
+            <div class="bb-bar-bg"><div class="bb-bar fill" style="width: 20%;"></div></div>
+          </div>
+          <div class="sprite">
+            <img src="assets/unit-1.png" alt="Unit 3">
+          </div>
+        </div>
+
+        <div class="unit back" id="unit-4">
+          <div class="gauge-container">
+            <div class="hp-bar-bg"><div class="hp-bar fill" style="width: 40%;"></div></div>
+            <div class="bb-bar-bg"><div class="bb-bar fill" style="width: 100%;"></div></div>
+          </div>
+          <div class="sprite">
+            <img src="assets/unit-1.png" alt="Unit 4">
+          </div>
+        </div>
+
+        <div class="unit front" id="unit-5">
+          <div class="gauge-container">
+            <div class="hp-bar-bg"><div class="hp-bar fill" style="width: 100%;"></div></div>
+            <div class="bb-bar-bg"><div class="bb-bar fill" style="width: 10%;"></div></div>
+          </div>
+          <div class="sprite">
+            <img src="assets/unit-1.png" alt="Unit 5">
+          </div>
+        </div>
+
+        <div class="unit back guest" id="unit-6">
+          <div class="gauge-container">
+            <div class="hp-bar-bg"><div class="hp-bar fill" style="width: 100%;"></div></div>
+            <div class="bb-bar-bg"><div class="bb-bar fill" style="width: 0%;"></div></div>
+          </div>
+          <div class="sprite">
+            <img src="assets/unit-1.png" alt="Guest">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer id="battle-footer">
       <button class="item-btn">アイテム</button>
       <button class="auto-btn">AUTO</button>
     </footer>
@@ -37,70 +106,6 @@
         <button id="next-btn">NEXT</button>
       </div>
     </div>
-    </div> <script src="script.js"></script>
-</body>
-</html>
-
-</div>
-
-    </section>
-
-    <section id="player-area">
-      <div class="unit-grid">
-        
-        <div class="unit front" id="unit-1">
-          <div class="gauge-container">
-            <div class="hp-bar-bg"><div class="hp-bar fill" style="width: 100%;"></div></div>
-            <div class="bb-bar-bg"><div class="bb-bar fill" style="width: 0%;"></div></div>
-          </div>
-          <div class="sprite">Unit 1</div>
-        </div>
-
-        <div class="unit back" id="unit-2">
-          <div class="gauge-container">
-            <div class="hp-bar-bg"><div class="hp-bar fill" style="width: 80%;"></div></div>
-            <div class="bb-bar-bg"><div class="bb-bar fill" style="width: 50%;"></div></div>
-          </div>
-          <div class="sprite">Unit 2</div>
-        </div>
-
-        <div class="unit front" id="unit-3">
-          <div class="gauge-container">
-            <div class="hp-bar-bg"><div class="hp-bar fill" style="width: 100%;"></div></div>
-            <div class="bb-bar-bg"><div class="bb-bar fill" style="width: 20%;"></div></div>
-          </div>
-          <div class="sprite">Unit 3</div>
-        </div>
-
-        <div class="unit back" id="unit-4">
-          <div class="gauge-container">
-            <div class="hp-bar-bg"><div class="hp-bar fill" style="width: 40%;"></div></div>
-            <div class="bb-bar-bg"><div class="bb-bar fill" style="width: 100%;"></div></div>
-          </div>
-          <div class="sprite">Unit 4</div>
-        </div>
-
-        <div class="unit front" id="unit-5">
-          <div class="gauge-container">
-            <div class="hp-bar-bg"><div class="hp-bar fill" style="width: 100%;"></div></div>
-            <div class="bb-bar-bg"><div class="bb-bar fill" style="width: 10%;"></div></div>
-          </div>
-          <div class="sprite">Unit 5</div>
-        </div>
-
-        <div class="unit back guest" id="unit-6">
-          <div class="gauge-container">
-            <div class="hp-bar-bg"><div class="hp-bar fill" style="width: 100%;"></div></div>
-            <div class="bb-bar-bg"><div class="bb-bar fill" style="width: 0%;"></div></div>
-          </div>
-          <div class="sprite">Guest</div>
-        </div>
-
-      </div>
-    </section> <footer id="battle-footer">
-      <button class="item-btn">アイテム</button>
-      <button class="auto-btn">AUTO</button>
-    </footer>
 
   </div> <script src="script.js"></script>
 </body>
