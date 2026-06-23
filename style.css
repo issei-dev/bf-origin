@@ -157,3 +157,25 @@ button {
 
 .item-btn { background-color: #7bed9f; color: #2f3542; }
 .auto-btn { background-color: #dfe4ea; color: #2f3542; }
+/* --- ここから追加：ドロップアイテム（クリスタル） --- */
+.crystal {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+  z-index: 100;
+  /* 飛び散る時はフワッと減速する動き（cubic-bezier） */
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  pointer-events: none; /* タップの邪魔にならないようにする */
+}
+
+/* バトルクリスタル（BC）：黄色 */
+.crystal.bc {
+  background-color: #eccc68;
+}
+
+/* ハートクリスタル（HC）：緑色 */
+.crystal.hc {
+  background-color: #2ed573;
+}
