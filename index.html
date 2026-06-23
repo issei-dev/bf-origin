@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>BF Origin - Battle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="game-container">
+    
+    <header id="battle-header">
+      <div class="wave-info">BATTLE 1 / 3</div>
+      <button class="menu-btn">MENU</button>
+    </header>
+
+    <section id="enemy-area">
+      <div class="enemy boss" id="enemy-1">
+        <div class="hp-bar-bg"><div class="hp-bar fill" style="width: 100%;"></div></div>
+        <div class="sprite">Enemy Boss</div>
+      </div>
+    </section>
+
+    <section id="player-area">
+      <div class="unit-grid">
+        
+        <div class="unit front" id="unit-1">
+          <div class="gauge-container">
+            <div class="hp-bar-bg"><div class="hp-bar fill" style="width: 100%;"></div></div>
+            <div class="bb-bar-bg"><div class="bb-bar fill" style="width: 0%;"></div></div>
+          </div>
+          <div class="sprite">Unit 1</div>
+        </div>
+
+        <div class="unit back" id="unit-2">
+          <div class="gauge-container">
+            <div class="hp-bar-bg"><div class="hp-bar fill" style="width: 80%;"></div></div>
+            <div class="bb-bar-bg"><div class="bb-bar fill" style="width: 50%;"></div></div>
+          </div>
+          <div class="sprite">Unit 2</div>
+        </div>
+
+        <div class="unit front" id="unit-3">
+          <div class="gauge-container">
+            <div class="hp-bar-bg"><div class="hp-bar fill" style="width: 100%;"></div></div>
+            <div class="bb-bar-bg"><div class="bb-bar fill" style="width: 20%;"></div></div>
+          </div>
+          <div class="sprite">Unit 3</div>
+        </div>
+
+        <div class="unit back" id="unit-4">
+          <div class="gauge-container">
+            <div class="hp-bar-bg"><div class="hp-bar fill" style="width: 40%;"></div></div>
+            <div class="bb-bar-bg"><div class="bb-bar fill" style="width: 100%;"></div></div>
+          </div>
+          <div class="sprite">Unit 4</div>
+        </div>
+
+        <div class="unit front" id="unit-5">
+          <div class="gauge-container">
+            <div class="hp-bar-bg"><div class="hp-bar fill" style="width: 100%;"></div></div>
+            <div class="bb-bar-bg"><div class="bb-bar fill" style="width: 10%;"></div></div>
+          </div>
+          <div class="sprite">Unit 5</div>
+        </div>
+
+        <div class="unit back guest" id="unit-6">
+          <div class="gauge-container">
+            <div class="hp-bar-bg"><div class="hp-bar fill" style="width: 100%;"></div></div>
+            <div class="bb-bar-bg"><div class="bb-bar fill" style="width: 0%;"></div></div>
+          </div>
+          <div class="sprite">Guest</div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer id="battle-footer">
+      <button class="item-btn">アイテム</button>
+      <button class="auto-btn">AUTO</button>
+    </footer>
+
+  </div>
+
+</body>
+</html>
