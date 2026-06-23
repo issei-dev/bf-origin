@@ -179,3 +179,18 @@ button {
 .crystal.hc {
   background-color: #2ed573;
 }
+/* --- 画像をスプライト枠に綺麗に収める設定 --- */
+.sprite img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 画像の比率を保ったまま枠を埋める */
+  border-radius: inherit; /* 親要素の角丸を引き継ぐ */
+}
+
+/* 画像が入ったので、仮の背景色と文字を透明にして隠す */
+.enemy .sprite, .unit .sprite {
+  background-color: transparent;
+  color: transparent;
+  box-shadow: none;
+}
+
