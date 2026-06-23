@@ -300,5 +300,12 @@ function showResultScreen() {
 document.getElementById('next-btn').addEventListener('click', () => {
   alert('ホーム画面へ戻ります（今後実装予定！）');
 });
+  function handleEnd(x, y) {
+    endX = x; endY = y;
+    const diffX = endX - startX;
+    const diffY = endY - startY;
+
+    // ★ 修正：バトル終了後も操作不可にする
+    if (!isPlayerTurn || unit.classList.contains('acted') || isBattleEnded) return;
 
 
