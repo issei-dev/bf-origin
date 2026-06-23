@@ -274,5 +274,31 @@ let isBattleEnded = false;
     // クリスタルの吸収アニメーションが終わるのを待ってからリザルトを表示（約1.5秒後）
     setTimeout(showResultScreen, 1500); 
   }
+// ★ 新機能：リザルト画面の表示と報酬計算
+function showResultScreen() {
+  console.log('--- QUEST CLEAR ---');
+
+  // 1. 報酬のランダム計算
+  const zel = Math.floor(Math.random() * 500) + 1000;   // 1000〜1500のゼル
+  const karma = Math.floor(Math.random() * 200) + 500;  // 500〜700のカルマ
+  
+  // 60%の確率でアイテムドロップ
+  const isItemDrop = Math.random() < 0.6;
+  const itemName = isItemDrop ? '回復薬' : 'なし';
+
+  // 2. HTMLの文字を書き換える
+  document.getElementById('reward-zel').textContent = zel;
+  document.getElementById('reward-karma').textContent = karma;
+  document.getElementById('reward-item').textContent = itemName;
+
+  // 3. リザルト画面を表示する（.show クラスを追加）
+  const resultScreen = document.getElementById('result-screen');
+  resultScreen.classList.add('show');
+}
+
+// NEXTボタンを押した時の処理（今はアラートだけ出しておきます）
+document.getElementById('next-btn').addEventListener('click', () => {
+  alert('ホーム画面へ戻ります（今後実装予定！）');
+});
 
 
