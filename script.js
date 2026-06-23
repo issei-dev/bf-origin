@@ -6,6 +6,17 @@ const enemyHpBar = document.querySelector('#enemy-1 .hp-bar');
 const playerUnits = document.querySelectorAll('.unit');
 const gameContainer = document.getElementById('game-container');
 
+// --- 既存のコード ---
+let enemyMaxHp = 1000;
+let enemyCurrentHp = 1000;
+const enemyHpBar = document.querySelector('#enemy-1 .hp-bar');
+const playerUnits = document.querySelectorAll('.unit');
+const gameContainer = document.getElementById('game-container');
+
+// ★ 追加：効果音の読み込み
+const seAttack = new Audio('assets/attack.mp3');
+
+
 // ★ 追加：ターン管理用の変数
 let isPlayerTurn = true;
 let actedUnitsCount = 0;
@@ -150,10 +161,17 @@ playerUnits.forEach(unit => {
 
 function executeNormalAttack(unit) {
   damageEnemy(false);
+  
+  // ★ 追加：効果音を最初から再生する
+  seAttack.currentTime = 0; // 連続タップしても最初から鳴るようにリセット
+  seAttack.play();
+
+  // 既存のアニメーション処理
   unit.style.transform = 'translateY(-20px)';
   setTimeout(() => { unit.style.transform = 'translateY(0)'; }, 100);
-  finishAction(unit); // 行動完了
+  finishAction(unit);
 }
+
 
 function executeBraveBurst(unit) {
   const bbBar = unit.querySelector('.bb-bar');
