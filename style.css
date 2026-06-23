@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+/* ベースリセット */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #111;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden; /* 画面全体の予期せぬスクロールを防止 */
+}
+
+/* ゲーム画面コンテナ（スマホ縦画面サイズ） */
+#game-container {
+  width: 100vw;
+  max-width: 480px;
+  height: 100vh;
+  max-height: 900px;
+  background: linear-gradient(to bottom, #4a6b8c, #2c3e50);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+/* ヘッダー */
+#battle-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black;
+  z-index: 10;
+}
+
+/* エネミーエリア */
+#enemy-area {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.enemy .sprite {
+  width: 120px;
+  height: 120px;
+  background-color: #ff4757;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+/* プレイヤーエリア */
+#player-area {
+  height: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* ユニットのグリッド配置（3行 × 2列） */
+.unit-grid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* ユニット単体のスタイル */
+.unit {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation; /* スマホ・タブレットでの連続タップ時のズームを防止 */
+}
+
+.unit .sprite {
+  width: 70px;
+  height: 70px;
+  background-color: #1e90ff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: transform 0.1s;
+}
+
+.unit.guest .sprite {
+  background-color: #ffa502;
+}
+
+/* ゲージコンテナ（HPとBB） */
+.gauge-container {
+  width: 70px;
+  margin-bottom: 5px;
+}
+
+/* ゲージの背景 */
+.hp-bar-bg, .bb-bar-bg {
+  width: 100%;
+  height: 6px;
+  background-color: #333;
+  border: 1px solid #000;
+  border-radius: 3px;
+  margin-bottom: 2px;
+  overflow: hidden;
+}
+
+/* ゲージの中身 */
+.fill {
+  height: 100%;
+  transition: width 0.3s ease-out; /* ダメージ増減時のアニメーション */
+}
+
+.hp-bar { background-color: #2ed573; }
+.bb-bar { background-color: #eccc68; }
+
+/* フッター */
+#battle-footer {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.item-btn { background-color: #7bed9f; color: #2f3542; }
+.auto-btn { background-color: #dfe4ea; color: #2f3542; }
